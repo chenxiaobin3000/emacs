@@ -1,0 +1,6 @@
+#!/bin/bash
+brew update
+brew upgrade emacs --with-cocoa
+brew upgrade
+brew cleanup
+

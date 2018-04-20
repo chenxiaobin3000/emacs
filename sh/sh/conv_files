@@ -1,0 +1,6 @@
+#!/bin/bash
+find . -type f -name '*.java' -print0 | while IFS= read -r -d '' file; do
+	echo "$file"
+	iconv -f gb18030 -t utf-8 "$file" > "$file.new"
+	mv "$file.new" "$file"
+done
