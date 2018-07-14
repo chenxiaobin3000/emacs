@@ -33,7 +33,6 @@ backspace	返回上级目录，不新开窗口
 
 C-o			显示/隐藏文件详细信息
 M-o			显示/隐藏默认隐藏文件
-C-x d		dired
 C-x C-j		dired-jump 跳转buffer所在目录
 C-x 4 C-j	dired-jump-other-window 同上
 C-x C-q		wdired

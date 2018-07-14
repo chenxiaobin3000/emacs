@@ -1,6 +1,6 @@
 #!/bin/bash
 brew update
-brew upgrade emacs --with-cocoa
+brew upgrade php --with-freetype
 brew upgrade
 brew cleanup
 

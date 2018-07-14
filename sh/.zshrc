@@ -107,12 +107,13 @@ alias nginxstart='sudo nginx'
 alias nginxoff='sudo nginx -s stop'
 alias nginxrestart='sudo nginx -s reload'
 alias javacheck='ps -ef | grep java'
-alias phpstart='php-fpm'
+alias phpstart='php-fpm -D'
 alias redisstart='redis-server /usr/local/etc/redis.conf'
 alias redisoff='redis-cli shutdown'
 alias tomcatstart='cd /usr/local/tomcat/bin && ./catalina.sh jpda start && cd $OLDPWD'
 alias tomcatoff='cd /usr/local/tomcat/bin && ./shutdown.sh && cd $OLDPWD'
 alias tomcattail='tail -f /usr/local/tomcat/logs/catalina.out'
+alias gearmandstart='gearmand -d'
 
 # path
 export MYSQL_HOME=/usr/local/mysql
