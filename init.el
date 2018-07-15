@@ -4,6 +4,9 @@
 ;;; Code:
 ;; (package-initialize) 由init-package来初始化
 
+;(setq spacemacs-start-directory "~/.emacs.d/spacemacs/")
+;(load-file (concat spacemacs-start-directory "init.el"))
+
 ;; 指定配置路径
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
@@ -50,7 +53,6 @@
 (require 'init-compilation)
 (require 'init-cursor)			;; 多光标
 (require 'init-regexp)			;; 可视化正则
-(require 'init-vlf)				;; 大文件
 
 ;; 语法模块
 (require 'init-org)
@@ -64,7 +66,6 @@
 (require 'init-css)
 (require 'init-php)
 (require 'init-lua)
-(require 'init-protobuf)
 (require 'init-markdown)
 
 ;;; init.el ends here

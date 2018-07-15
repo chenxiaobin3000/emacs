@@ -50,13 +50,13 @@ M-ret		外部程序打开
 (require 'dired-x)
 
 ;; dired+
-(require-package 'dired+)
+;(require-package 'dired+)
 (require 'dired+)
 
 (require-package 'dired-subtree)
 (require 'dired-subtree)
 
-(require-package 'dired-sort)
+;(require-package 'dired-sort)
 (require 'dired-sort)
 
 ;; dired配置

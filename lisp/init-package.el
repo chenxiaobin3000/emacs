@@ -8,10 +8,14 @@
 (defun package-source-mac ()
   "Set package source for mac."
   (interactive)
-  ;; 可以用ssl源
+  ;; 可以用国内镜像源
   (setq package-archives
-		'(("melpa" . "https://melpa.org/packages/")
-		  ("gnu" . "https://elpa.gnu.org/packages/"))))
+		'(("melpa" . "http://elpa.emacs-china.org/melpa/")
+		  ("gnu" . "http://elpa.emacs-china.org/gnu/"))))
+  ;; 可以用官方源
+;  (setq package-archives
+;		'(("melpa" . "https://melpa.org/packages/")
+;		  ("gnu" . "https://elpa.gnu.org/packages/"))))
 
 ;; win下设置源
 (defun package-source-win ()

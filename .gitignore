@@ -1,5 +1,7 @@
 elpa/*
 eshell/*
+spacemacs/*
+.cache/*
 .sqli_history
 .mc-lists.el
 ido.last
@@ -7,3 +9,4 @@ projectile*
 recentf
 tramp
 markfile.data
+*.elc

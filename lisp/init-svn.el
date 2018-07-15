@@ -24,7 +24,8 @@ X X			开始解决冲突
 X v			已解决冲突
 ########################################"))
 
-(require-package 'psvn)
+;(require-package 'psvn)
+(require 'psvn)
 
 (setq svn-status-hide-externals t) ;; 目录方式显示
 (setq svn-status-hide-unmodified t) ;; 隐藏未修改文件
