@@ -85,9 +85,7 @@ M-ret		外部程序打开
    (define-key dired-mode-map (kbd "C-o") 'dired-hide-details-mode)
    (define-key dired-mode-map (kbd "<backspace>") 'dired-my-up-directory)
    (define-key dired-mode-map (kbd "<return>") 'dired-my-find-alternate-file)
-   (define-key dired-mode-map (kbd "RET") 'dired-my-find-alternate-file)
-   (define-key dired-mode-map (kbd "<C-return>") 'dired-find-file-other-window)
-   (define-key dired-mode-map (kbd "<M-return>") 'dired-my-find-file-other-window))
+   (define-key dired-mode-map (kbd "RET") 'dired-my-find-alternate-file))
 
 ;; 目录置顶
 (defun dired-directory-sort ()
@@ -120,22 +118,6 @@ and the cursor will be moved to where the previous directory."
   (if (file-regular-p (dired-get-filename))
       (dired-find-file)
     (dired-find-alternate-file)))
-
-;; 在另一个窗口打开但是光标保留在dired内
-(defun dired-my-find-file-other-window ()
-  "Dired my find file other window."
-  (interactive)
-  (dired-find-file-other-window)
-  (other-window -1))
-
-;; 调用外部程序打开
-(defun dired-open-file-with-external-program ()
-  "Open file with external program in dired."
-  (interactive)
-  (let* ((file (dired-get-filename nil t)))
-    (message "Opening %s..." file)
-    (call-process-shell-command (concat "open " file))
-    (message "Opening %s done" file)))
 
 (provide 'init-dired)
 ;;; init-dired.el ends here

@@ -29,7 +29,7 @@ X v			已解决冲突
 
 (setq svn-status-hide-externals t) ;; 目录方式显示
 (setq svn-status-hide-unmodified t) ;; 隐藏未修改文件
-(setq svn-status-hide-unknown t) ;; 隐藏为受控文件
+(setq svn-status-hide-unknown t) ;; 隐藏未受控文件
 
 (add-hook 'svn-status-mode-hook
 		  (lambda ()

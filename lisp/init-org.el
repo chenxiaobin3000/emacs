@@ -31,10 +31,6 @@ C-c C-d			插入截止时间
 ;; org 自动换行
 (add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
 
-;; org 完成todo加时间戳或备注
-(setq org-log-done 'time)
-;(setq org-log-done 'note)
-
 ;; 设置org缩进
 (setq org-startup-indented t)
 

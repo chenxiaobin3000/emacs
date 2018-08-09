@@ -43,7 +43,7 @@
 (menu-bar-mode -1)
 
 ;; 设置滚轮行数
-(setq mouse-wheel-scroll-amount '(6))
+(setq mouse-wheel-scroll-amount '(1))
 (setq mouse-wheel-progressive-speed nil)
 
 ;; 括号匹配时显示另外一边的括号，而不是跳到另一个括号
@@ -73,12 +73,6 @@
 ;; 禁止custom添加配置
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
-
-;; 配置最近打开的文件
-(require 'recentf)
-(recentf-mode 1)
-(setq recentf-max-saved-items 20)
-(setq recentf-exclude '("/tmp/" "/ssh:" "/scp:"))
 
 (provide 'init-emacs)
 ;;; init-emacs.el ends here

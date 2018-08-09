@@ -10,12 +10,6 @@
   `(eval-after-load ,feature
 	 '(progn ,@body)))
 
-;; this func from Purcell
-(defun add-auto-mode (mode &rest patterns)
-  "Add entries to `auto-mode-alist' to use `MODE' for all given file `PATTERNS'."
-  (dolist (pattern patterns)
-    (add-to-list 'auto-mode-alist (cons pattern mode))))
-
 (defun projectile-create-new-project ()
   "Projectile create new project."
   (interactive)
@@ -104,17 +98,6 @@
   "Tab for term."
   (interactive)
   (term-send-raw-string "\t"))
-
-(defun quick-help-menu (cmd)
-  "Quick help menu, use CMD."
-  (interactive
-   "c[a]bort; [f]lush; [i]menu; [s]wiper?")
-  (cond
-   ((char-equal cmd ?a) (user-error "Abort"))
-   ((char-equal cmd ?f) (flush-buffer-no-confirm))
-   ((char-equal cmd ?i) (counsel-imenu))
-   ((char-equal cmd ?s) (swiper))
-   ((call-interactively 'quick-help-menu))))
 
 ;; 自定义help布局
 (defun help-few-windows (text)

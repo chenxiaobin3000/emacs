@@ -16,8 +16,6 @@ M-y			移动剪切环
 M-SPC		标记开始
 C-u M-SPE	跳回标记处
 M-;			切换块注释
-C-c r		可视正则替换(逐行)
-C-c q		可视正则替换
 C-h			进入evil模式
 C-M-方向	增大buffer
 C-c SPE		ace-jump
@@ -26,14 +24,13 @@ C-c m		多光标模式
 C->			上一行
 C-<			下一行
 
-C-c ?		快捷帮助菜单
+s-q			可视正则替换
 
 F5			运行
 F6			编译
 F7			中止操作
 F8			打开终端
 
-M-%%   		替换query-replace
 M-.			etags 跳转
 M-*			跳回到之前的地方
 C-x 4 .		在另一buffer中定位
@@ -47,8 +44,6 @@ tramp		/ssh:user@host:/path
 (global-set-key (kbd "M-SPC") 'set-mark-command)
 (global-set-key (kbd "C-x f") 'find-file)
 (global-set-key (kbd "C-x C-f") 'counsel-find-file)
-(global-set-key (kbd "C-x 5 f") 'my-find-file-other-window)
-(global-set-key (kbd "C-x 5 b") 'my-switch-to-buffer-other-window)
 (global-set-key (kbd "C-x d") 'markfile-find-file)
 (global-set-key (kbd "C-x C-d") 'markfile-find-file)
 (global-set-key (kbd "C-x p") 'projectile-find-file)
@@ -58,11 +53,9 @@ tramp		/ssh:user@host:/path
 (global-set-key (kbd "M-d") 'my-kill-word)
 (global-set-key (kbd "M-s") 'save-buffer)
 (global-set-key (kbd "C-x k") 'kill-this-buffer)
-(global-set-key (kbd "C-x C-k") 'kill-matching-buffers)
+(global-set-key (kbd "C-x C-k") 'kill-this-buffer)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 (global-set-key (kbd "M-y") 'counsel-yank-pop)
-(global-set-key (kbd "C--") 'hs-hide-level)
-(global-set-key (kbd "C-+") 'hs-show-all)
 (global-set-key (kbd "C-=") 'er/expand-region)
 (global-set-key (kbd "C-t") 'insert-tab-char) ;; 输入tab
 (global-set-key [remap move-beginning-of-line]
@@ -72,15 +65,9 @@ tramp		/ssh:user@host:/path
 (global-set-key (kbd "M-o") 'ff-find-other-file) ;; 跳转到文件
 (global-set-key (kbd "C-h") 'evil-normal-state) ;; 进入evil模式
 (global-set-key (kbd "M-;") 'evilnc-comment-or-uncomment-lines)
-(global-set-key (kbd "C-M-;") 'hide/show-comments-toggle)
-(global-set-key (kbd "C-c ?") 'quick-help-menu)
-(global-set-key (kbd "C-c f") 'origami-recursively-toggle-node)
-(global-set-key (kbd "C-c F") 'origami-toggle-all-nodes)
-(global-set-key (kbd "C-c i") 'counsel-imenu)
-(global-set-key (kbd "C-c k") 'delete-indentation)
-(global-set-key (kbd "C-c q") 'vr/query-replace)
-(global-set-key (kbd "C-c r") 'vr/replace)
-(global-set-key (kbd "C-c s") 'swiper)
+(global-set-key (kbd "s-f") 'swiper)
+(global-set-key (kbd "s-r") 'vr/query-replace)
+(global-set-key (kbd "s-h") 'origami-toggle-node)
 
 (global-set-key (kbd "C-M-<left>") 'shrink-window-horizontally)
 (global-set-key (kbd "C-M-<right>") 'enlarge-window-horizontally)
@@ -93,7 +80,6 @@ tramp		/ssh:user@host:/path
 (global-set-key (kbd "C-c C-SPC") 'ace-jump-mode-pop-mark)
 
 ;; multi cursor
-(global-set-key (kbd "C-c m") 'mc/edit-lines)
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-unset-key (kbd "M-<down-mouse-1>"))

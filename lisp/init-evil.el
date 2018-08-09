@@ -22,19 +22,23 @@ n,m				第n行到第m行
 
 :g/pattern/d	删除匹配行
 :g!/pattern/d	删除未匹配行
+\\U\\L			全部转大写，转小写
+\\u\\l			首字母转大写，转小写
+.*				贪婪模式
+.*?				非贪婪-加问号
 
-cs')		替换'为) -- evil-surround
-ds'			删除'
-ysiw'		为单词添加'
-yss'		为当前行添加'
-ySS'		为当前行添加'，'为上下行，也可以用ySs
-t			代表<>标签
+cs')			替换'为) -- evil-surround
+ds'				删除'
+ysiw'			为单词添加'
+yss'			为当前行添加'
+ySS'			为当前行添加'，'为上下行，也可以用ySs
+t				代表<>标签
 
-gx			选中块，第二次交换块 -- evil-exchange
-gX			取消所有选中块
-gxx			选中当前行
+gx				选中块，第二次交换块 -- evil-exchange
+gX				取消所有选中块
+gxx				选中当前行
 
-SPC ;		切换注释 -- evil-nerd-commenter
+SPC ;			切换注释 -- evil-nerd-commenter
 ########################################"))
 
 ;; 绑定C-u到翻页，必须在前面
@@ -72,9 +76,6 @@ SPC ;		切换注释 -- evil-nerd-commenter
 
 ;; 全局配置
 (setq evil-default-state 'emacs)
-
-;; 指定mode初始化状态
-(evil-set-initial-state 'speedbar-mode 'emacs)
 
 ;; 指定光标
 (setq evil-emacs-state-cursor 'bar)
