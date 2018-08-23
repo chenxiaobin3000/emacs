@@ -80,6 +80,7 @@ tramp		/ssh:user@host:/path
 (global-set-key (kbd "C-c C-SPC") 'ace-jump-mode-pop-mark)
 
 ;; multi cursor
+(global-set-key (kbd "C-c m") 'mc/edit-lines)
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-unset-key (kbd "M-<down-mouse-1>"))

@@ -31,11 +31,12 @@ X v			已解决冲突
 (setq svn-status-hide-unmodified t) ;; 隐藏未修改文件
 (setq svn-status-hide-unknown t) ;; 隐藏未受控文件
 
-(add-hook 'svn-status-mode-hook
-		  (lambda ()
-			;; 显示全局日志
-			(define-key svn-status-mode-map (kbd "L")
-			  'my-svn-status-show-svn-log)))
+(add-hook
+ 'svn-status-mode-hook
+ (lambda ()
+   ;; 显示全局日志
+   (define-key svn-status-mode-map (kbd "L")
+	 'my-svn-status-show-svn-log)))
 
 ;; 显示全局日志
 (defun my-svn-status-show-svn-log ()

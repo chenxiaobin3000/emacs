@@ -7,10 +7,11 @@
 (ido-mode t)
 (ido-everywhere t)
 
-(add-hook 'ido-setup-hook
-		  (lambda ()
-			(define-key ido-completion-map (kbd "<up>") 'previous-history-element)
-			(define-key ido-completion-map (kbd "<tab>") 'ido-exit-minibuffer)))
+(add-hook
+ 'ido-setup-hook
+ (lambda ()
+   (define-key ido-completion-map (kbd "<up>") 'previous-history-element)
+   (define-key ido-completion-map (kbd "<tab>") 'ido-exit-minibuffer)))
 
 ;; mac下配置
 (when (eq system-type 'darwin)

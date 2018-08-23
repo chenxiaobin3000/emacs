@@ -39,15 +39,13 @@
     (minibuffer-complete))
    (t
     (indent-for-tab-command)
-    ;; (if (or (not yas/minor-mode)
-			;; (null (do-yas-expand)))
-		(if (check-expansion)
-			(progn
-			  (company-manual-begin)
-			  (if (null company-candidates)
-				  (progn
-					(company-abort)
-					(indent-for-tab-command))))))))
+ 	(if (check-expansion)
+		(progn
+		  (company-manual-begin)
+		  (if (null company-candidates)
+			  (progn
+				(company-abort)
+				(indent-for-tab-command))))))))
 
 (provide 'init-company)
 ;;; init-company.el ends here

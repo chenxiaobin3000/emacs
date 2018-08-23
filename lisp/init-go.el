@@ -11,18 +11,19 @@
 (add-hook 'before-save-hook 'gofmt-before-save)
 
 ;; 使用godef
-(add-hook 'go-mode-hook
-		  (lambda ()
-			;; 自动补全
-			(require 'company-go)
-			(set (make-local-variable 'company-backends) '(company-go))
+(add-hook
+ 'go-mode-hook
+ (lambda ()
+   ;; 自动补全
+   (require 'company-go)
+   (set (make-local-variable 'company-backends) '(company-go))
 
-			;; 语法检查
-			(add-to-list 'load-path "~/Documents/go/src/github.com/dougm/goflymake")
-			(require 'go-flycheck)
+   ;; 语法检查
+   (add-to-list 'load-path "~/Documents/go/src/github.com/dougm/goflymake")
+   (require 'go-flycheck)
 
-			(local-set-key (kbd "M-.") 'godef-jump)
-			(local-set-key (kbd "M-*") 'pop-tag-mark)))
+   (local-set-key (kbd "M-.") 'godef-jump)
+   (local-set-key (kbd "M-*") 'pop-tag-mark)))
 
 (provide 'init-go)
 ;;; init-go.el ends here

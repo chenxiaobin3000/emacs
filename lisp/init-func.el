@@ -52,31 +52,8 @@
     (if bounds (kill-region (car bounds) (cdr bounds))
       (delete-char 1))))
 
-(defun my-find-file-other-window (filename &optional wildcards)
-  "Find file other window with FILENAME OPTIONAL WILDCARDS."
-  (interactive
-   (find-file-read-args "Find file in other window: "
-                        (confirm-nonexistent-file-or-buffer)))
-  (let ((value (find-file-noselect filename nil nil wildcards)))
-    (if (listp value)
-		(progn
-		  (setq value (nreverse value))
-		  (switch-to-buffer-other-window (car value))
-		  (mapc 'switch-to-buffer (cdr value))
-		  value)
-      (switch-to-buffer-other-window value)
-	  (other-window -1))))
-
-(defun my-switch-to-buffer-other-window (buffer-or-name &optional norecord)
-  "Switch to buffer other window with BUFFER-OR-NAME OPTIONAL NORECORD."
-  (interactive
-   (list (read-buffer-to-switch "Switch to buffer in other window: ")))
-  (let ((pop-up-windows t))
-    (pop-to-buffer buffer-or-name t norecord))
-  (other-window -1))
-
 (defun reset-emacs()
-  "Reset emacs buffer."
+  "Reset Emacs buffer."
   (interactive)
   (delete-other-windows)
   (mapc 'kill-buffer (buffer-list))
@@ -89,10 +66,17 @@
   (interactive)
   (insert "\t"))
 
-(defun flush-buffer-no-confirm ()
-  "Revert buffer without confirmation."
+(defun my-flush-current-buffer ()
+  "Revert buffer."
   (interactive)
   (revert-buffer t t))
+
+(defun my-current-buffer-as-root ()
+  "Edit the file that is associated with the current buffer as root."
+  (interactive)
+  (let ((filep (buffer-file-name)))
+    (if filep (find-file (concat "/sudo::" filep))
+      (message "Current buffer does not have an associated file."))))
 
 (defun term-tab-complete ()
   "Tab for term."

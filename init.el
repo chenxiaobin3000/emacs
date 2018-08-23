@@ -19,6 +19,7 @@
 (require 'init-emacs)			;; emacs基础配置
 (require 'init-shell)			;; shell配置
 (require 'init-keys)			;; 配置快捷键
+(require 'init-tramp)			;; 配置tramp
 
 ;; 窗口模块
 (require 'init-theme)			;; 颜色配置
@@ -57,8 +58,6 @@
 ;; 语法模块
 (require 'init-org)
 (require 'init-csharp)
-(require 'init-lisp)
-(require 'init-scheme)
 (require 'init-go)
 (require 'init-python)
 (require 'init-web-mode)

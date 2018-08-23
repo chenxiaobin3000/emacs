@@ -40,17 +40,12 @@
   (my-init-solarized 'dark)
   (set-face-attribute 'default nil :height 180))
 
-;; 新窗口设置主题，修正emacsclient -c没有显示正确风格，判断系统对应设置
-(defun run-after-make-frame-hooks (frame)
-  "Run after make frame without FRAME."
-  (if window-system
-      (cond
-       ((eq system-type 'darwin) (custom-set-font-mac))
-       ((eq system-type 'windows-nt) (custom-set-font-win)))
-    (custom-set-font-console)))
-(run-after-make-frame-hooks nil)
-
-(add-hook 'after-make-frame-functions 'run-after-make-frame-hooks)
+;; 判断系统对应设置
+(if window-system
+    (cond
+     ((eq system-type 'darwin) (custom-set-font-mac))
+     ((eq system-type 'windows-nt) (custom-set-font-win)))
+  (custom-set-font-console))
 
 (provide 'init-theme)
 ;;; init-theme.el ends here
