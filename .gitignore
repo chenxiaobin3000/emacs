@@ -1,11 +1,13 @@
+auto-save-list/*
 elpa/*
 eshell/*
 spacemacs/*
 .cache/*
+.DS_Store
 .sqli_history
 .mc-lists.el
 ido.last
-projectile*
+smex-items
 recentf
 tramp
 markfile.data
