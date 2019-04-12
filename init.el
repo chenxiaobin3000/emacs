@@ -30,8 +30,6 @@
 (require 'init-neotree)			;; 侧边栏
 
 ;; 编码模块
-(require 'init-cscope)
-(require 'init-project)			;; 工程插件
 (require 'init-flycheck)		;; 错误检查
 (require 'init-yasnippet)		;; 模板扩展
 (require 'init-company)			;; 自动补全
@@ -65,6 +63,5 @@
 (require 'init-css)
 (require 'init-php)
 (require 'init-lua)
-(require 'init-markdown)
 
 ;;; init.el ends here

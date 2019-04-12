@@ -36,10 +36,6 @@ M-o			显示/隐藏默认隐藏文件
 C-x C-j		dired-jump 跳转buffer所在目录
 C-x 4 C-j	dired-jump-other-window 同上
 C-x C-q		wdired
-
-ret			打开文件
-C-ret		other-window打开，焦点不变
-M-ret		外部程序打开
 ########################################"))
 
 ;; 显示文件细节
@@ -55,9 +51,6 @@ M-ret		外部程序打开
 
 (require-package 'dired-subtree)
 (require 'dired-subtree)
-
-;(require-package 'dired-sort)
-(require 'dired-sort)
 
 ;; dired配置
 (setq dired-dwim-target t)					;; 双窗口的时候，R/C会以另一个窗口为目标路径

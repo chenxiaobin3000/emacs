@@ -34,9 +34,8 @@
 (require 'hl-line)
 (global-hl-line-mode t)
 
-;; 关闭提示音
-;(setq visible-bell t)
-(setq visible-bell nil) ; mac下去乱码框
+;; 关闭提示音，mac下去乱码框
+(setq visible-bell nil)
 
 ;; 简化工具条
 (tool-bar-mode -1)

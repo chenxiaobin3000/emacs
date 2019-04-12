@@ -113,43 +113,17 @@ alias redisoff='redis-cli shutdown'
 alias tomcatstart='cd /usr/local/tomcat/bin && ./catalina.sh jpda start && cd $OLDPWD'
 alias tomcatoff='cd /usr/local/tomcat/bin && ./shutdown.sh && cd $OLDPWD'
 alias tomcattail='tail -f /usr/local/tomcat/logs/catalina.out'
-alias gearmandstart='gearmand -d'
 
 # path
-export MYSQL_HOME=/usr/local/mysql
-export MAVEN_HOME=/usr/local/maven
-export GRADLE_HOME=/usr/local/Cellar/gradle/3.5/libexec
 export GOROOT=/usr/local/opt/go/libexec
 export GOPATH=$HOME/Documents/go
 
-PATH=$MYSQL_HOME/bin:$MAVEN_HOME/bin:$GOROOT/bin:$GOPATH/bin:$PATH
+PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 
 # homebrew
 PATH=/usr/local/sbin:$PATH
-
-# mono
-export MONO_PATH=/Library/Frameworks/Mono.framework/Libraries/mono/4.5
-export MONO_CFG_DIR=/Library/Frameworks/Mono.framework/Home/etc
-PATH=/Library/Frameworks/Mono.framework/Commands:${PATH}
-
-# ndk
-export NDK_ROOT=/Users/chenxiaobin/Library/Android/sdk/ndk-bundle
-PATH=$NDK_ROOT:$PATH
-
-# android_sdk
-export ANDROID_SDK_ROOT=/Users/chenxiaobin/Library/Android/sdk
-export ANDROID_HOME=$ANDROID_SDK_ROOT
-PATH=$ANDROID_SDK_ROOT:$PATH
-PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
-
-# npm for taobao
-alias cnpm="npm --registry=https://registry.npm.taobao.org --cache=$HOME/.npm/.cache/cnpm --disturl=https://npm.taobao.org/dist --userconfig=$HOME/.cnpmrc"
 
 export SVN_EDITOR=/usr/local/bin/emacs
 export GIT_EDITOR=/usr/local/bin/emacs
 
 export PATH
-
-# jenv
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
