@@ -73,5 +73,8 @@
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
 
+;; 消除警告
+(setq byte-compile-warnings '(cl-functions))
+
 (provide 'init-emacs)
 ;;; init-emacs.el ends here

@@ -2,22 +2,14 @@
 ;;; Commentary:
 
 ;;; Code:
-(require-package 'color-theme-solarized)
-
-(defun my-init-solarized (mode)
-  "Init solarized with MODE."
-  (load-theme 'solarized t)
-  (set-frame-parameter nil 'background-mode mode)
-  (set-terminal-parameter nil 'background-mode mode)
-  (enable-theme 'solarized))
+(require-package 'color-theme-sanityinc-solarized)
+(color-theme-sanityinc-solarized-dark)
 
 ;; mac下设置
 (defun custom-set-font-mac ()
   "Custom set font mac."
   ;; 启动最大化
   (add-hook 'window-setup-hook 'toggle-frame-maximized t)
-  ;(add-hook 'window-setup-hook 'toggle-frame-fullscreen t)
-  (my-init-solarized 'dark)
   ;; 设置英文字体
   (set-face-attribute 'default nil :font "Ayuthaya 16")
   ;; 设置中文字体
@@ -30,14 +22,12 @@
   "Custom set font win."
   ;; 启动最大化
   (add-hook 'window-setup-hook 'toggle-frame-maximized t)
-  (my-init-solarized 'light)
   ;; 设置英文字体
   (set-face-attribute 'default nil :font "Courier New 14" :bold t))
 
 ;; console下设置
 (defun custom-set-font-console ()
   "Custom set font console."
-  (my-init-solarized 'dark)
   (set-face-attribute 'default nil :height 180))
 
 ;; 判断系统对应设置

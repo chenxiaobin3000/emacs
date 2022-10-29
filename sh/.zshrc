@@ -121,7 +121,7 @@ export GOPATH=$HOME/Documents/go
 PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 
 # homebrew
-PATH=/usr/local/sbin:$PATH
+PATH=/usr/local/sbin:/usr/local/opt/ruby/bin:/usr/local/opt/inetutils/libexec/gnubin:$PATH
 
 export SVN_EDITOR=/usr/local/bin/emacs
 export GIT_EDITOR=/usr/local/bin/emacs

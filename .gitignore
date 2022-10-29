@@ -11,4 +11,6 @@ smex-items
 recentf
 tramp
 markfile.data
+transient
 *.elc
+*~undo-tree~*

@@ -10,8 +10,8 @@
   (interactive)
   ;; 可以用国内镜像源
   (setq package-archives
-		'(("melpa" . "http://elpa.emacs-china.org/melpa/")
-		  ("gnu" . "http://elpa.emacs-china.org/gnu/"))))
+		'(("melpa" . "http://mirrors.163.com/elpa/melpa/")
+		  ("gnu" . "http://mirrors.163.com/elpa/gnu/"))))
 ;  ;; 可以用官方源
 ;  (setq package-archives
 ;		'(("melpa" . "https://melpa.org/packages/")
@@ -23,8 +23,8 @@
   (interactive)
   ;; 不使用ssl源
   (setq package-archives
-		'(("melpa" . "http://melpa.org/packages/")
-		  ("gnu" . "http://elpa.gnu.org/packages/"))))
+		'(("melpa" . "http://mirrors.163.com/elpa/melpa/")
+		  ("gnu" . "http://mirrors.163.com/elpa/gnu/"))))
 
 ;; windows下启动gnutls
 (if window-system

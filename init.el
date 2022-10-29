@@ -14,7 +14,6 @@
 ;; 基础模块
 (require 'init-func)			;; 添加自定义函数
 (require 'init-package)			;; 依赖包配置
-;(require 'init-benchmark-init)	;; 检测启动时间
 (require 'init-exec)			;; 配置运行环境
 (require 'init-emacs)			;; emacs基础配置
 (require 'init-shell)			;; shell配置
