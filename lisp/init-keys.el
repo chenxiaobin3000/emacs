@@ -56,6 +56,8 @@ tramp		/ssh:user@host:/path
                 'smarter-move-beginning-of-line) ;; 重定义c-a
 (global-set-key (kbd "M-n") 'my-scroll-up)
 (global-set-key (kbd "M-p") 'my-scroll-down)
+(global-set-key (kbd "M-j") 'tabbar-backward)
+(global-set-key (kbd "M-k") 'tabbar-forward)
 (global-set-key (kbd "M-o") 'ff-find-other-file) ;; 跳转到文件
 (global-set-key (kbd "C-h") 'evil-normal-state) ;; 进入evil模式
 (global-set-key (kbd "M-;") 'evilnc-comment-or-uncomment-lines)

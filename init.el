@@ -2,10 +2,6 @@
 ;;; Commentary:
 
 ;;; Code:
-;; (package-initialize) 由init-package来初始化
-
-;(setq spacemacs-start-directory "~/.emacs.d/spacemacs/")
-;(load-file (concat spacemacs-start-directory "init.el"))
 
 ;; 指定配置路径
 (add-to-list 'load-path "~/.emacs.d/lisp")
@@ -22,6 +18,7 @@
 
 ;; 窗口模块
 (require 'init-theme)			;; 颜色配置
+(require 'init-tabbar)			;; 标签栏
 (require 'init-ibuffer)			;; 更好看的ibuffer
 (require 'init-modeline)		;; 更好看的modeline
 (require 'init-windows)			;; 窗口编号
