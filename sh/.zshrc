@@ -100,19 +100,6 @@ alias ls='ls -G'
 alias ll='ls -l'
 alias la='ls -a'
 alias scpr='rsync -P --rsh=ssh'
-alias emacsstart='emacs --daemon'
-alias emacsoff="emacsclient -e '(save-buffers-kill-emacs)'"
-alias emacsnew='emacsclient -n -c -a emacs "$@" >/dev/null 2>&1 &'
-alias nginxstart='sudo nginx'
-alias nginxoff='sudo nginx -s stop'
-alias nginxrestart='sudo nginx -s reload'
-alias javacheck='ps -ef | grep java'
-alias phpstart='php-fpm -D'
-alias redisstart='redis-server /usr/local/etc/redis.conf'
-alias redisoff='redis-cli shutdown'
-alias tomcatstart='cd /usr/local/tomcat/bin && ./catalina.sh jpda start && cd $OLDPWD'
-alias tomcatoff='cd /usr/local/tomcat/bin && ./shutdown.sh && cd $OLDPWD'
-alias tomcattail='tail -f /usr/local/tomcat/logs/catalina.out'
 
 # path
 export GOROOT=/usr/local/opt/go/libexec
@@ -122,6 +109,8 @@ PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 
 # homebrew
 PATH=/usr/local/sbin:/usr/local/opt/ruby/bin:/usr/local/opt/inetutils/libexec/gnubin:$PATH
+# homebrew代理
+export ALL_PROXY=socks5://127.0.0.1:1086
 
 export SVN_EDITOR=/usr/local/bin/emacs
 export GIT_EDITOR=/usr/local/bin/emacs
