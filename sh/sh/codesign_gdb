@@ -1,2 +1,0 @@
-#!/bin/bash
-codesign -f -s "gdb-cert" /usr/local/bin/gdb

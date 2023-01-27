@@ -1,2 +1,0 @@
-#!/bin/bash
-cscope -bkq -i cscope.files

@@ -101,14 +101,19 @@ alias ll='ls -l'
 alias la='ls -a'
 alias scpr='rsync -P --rsh=ssh'
 
-# path
+# java
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home
+PATH=$JAVA_HOME/bin:$PATH
+
+# go
 export GOROOT=/usr/local/opt/go/libexec
 export GOPATH=$HOME/Documents/go
 
 PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 
 # homebrew
-PATH=/usr/local/sbin:/usr/local/opt/ruby/bin:/usr/local/opt/inetutils/libexec/gnubin:$PATH
+PATH=/usr/local/sbin:/usr/local/opt/ruby/bin:$PATH
+
 # homebrew代理
 export ALL_PROXY=socks5://127.0.0.1:1086
 
